@@ -9,7 +9,7 @@ const morgan = require('morgan');
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 
-const check = require("../db/connectCheck")
+const check = require('../db/connectCheck');
 
 const app = express();
 
