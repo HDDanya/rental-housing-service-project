@@ -3,7 +3,7 @@ const React = require('react');
 const Layout = require('./Layout');
 
 function FlatRender({
-  flat, house, apartment, user,
+  flat, user,
 }) {
   return (
     <Layout user={user}>
