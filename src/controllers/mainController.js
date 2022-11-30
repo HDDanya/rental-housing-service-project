@@ -8,7 +8,7 @@ const renderMain = async (req, res) => {
     const flat = await Flat.findAll({ raw: true });
     const house = await House.findAll({ raw: true });
     const apartment = await Apartment.findAll({ raw: true });
-    console.log('🚀 ~ house', house);
+    // console.log('🚀 ~ house', house);
     const user = req.session.newUser;
     renderTemplate(Main, {
       flat, house, apartment, user,

@@ -11,34 +11,34 @@ function FlatRender({
 
         <br />
         <div data-cards="123" className="cards">
-          {flat?.map((entry) => (
-            <div className="card" style={{ width: '16rem' }} key={entry.id}>
+          {flat?.map((el) => (
+            <div className="card" style={{ width: '16rem' }} key={el.id}>
               <div className="card-body">
                 <figure className="figure">
-                  <img src={entry.photo} className="card-img-top figure-img img-fluid rounded" alt="" />
+                  <img src={el.photo} className="card-img-top figure-img img-fluid rounded" alt="" />
                 </figure>
                 <p className="card-text">
                   Комната
                   {' '}
-                  {entry.size}
+                  {el.size}
                   {' '}
                   м²
                 </p>
                 <p className="card-text">
-                  {entry.price}
+                  {el.price}
                   {' '}
                   ₽ в месяц
                 </p>
                 <p className="card-text">
                   Москва
                   {' '}
-                  {entry.adress}
+                  {el.adress}
                   ,
                   {' '}
-                  {entry.floor}
+                  {el.floor}
                   -й этаж
                 </p>
-                <a href={`/tasks/${entry.id}`} className="btn btn-primary">Детали</a>
+                <a href={`/tasks/${el.id}`} className="btn btn-primary">Детали</a>
                 {/* <a href="#" data-delBtn={entry.id} className="m-2 btn btn-danger">DELETE</a> */}
               </div>
             </div>
