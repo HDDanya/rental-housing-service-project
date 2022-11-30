@@ -14,6 +14,7 @@ const check = require("../db/connectCheck");
 const loginRoutes = require("./routers/loginRoutes");
 const regRoutes = require("./routers/regRoutes");
 const mainRouter = require('./routers/mainRouters');
+const flatRouter = require('./routers/flatRouters');
 
 const app = express();
 
@@ -47,6 +48,7 @@ app.use(session(sessionConfig));
 app.use("/login", loginRoutes);
 app.use("/register", regRoutes);
 app.use('/', mainRouter);
+app.use('/flat', flatRouter);
 
 app.get("/logout", async (req, res) => {
   console.log(req.query);

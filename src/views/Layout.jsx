@@ -35,7 +35,7 @@ module.exports = function Layout({ children, user }) {
                       <a className="nav-link active apart" aria-current="page" href="#">Квартира</a>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link floor" href="#">Комната</a>
+                      <a className="nav-link floor" href="/flat">Комната</a>
                     </li>
                     <li className="nav-item">
                       <a className="nav-link house" href="#">Дом</a>
