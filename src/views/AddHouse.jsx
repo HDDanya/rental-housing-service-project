@@ -23,7 +23,6 @@ module.exports = function House({ user }) {
                 <label htmlFor="validationCustomUsername" className="form-label">Цена: рубли/сутки</label>
                 <div className="input-group has-validation">
                   <input name="price" type="number" className="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required />
-
                 </div>
               </div>
               <div className="col-md-3 input-div">

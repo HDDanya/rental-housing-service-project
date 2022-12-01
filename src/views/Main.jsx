@@ -14,7 +14,6 @@ function Main({
         <div data-cards="123" className="cards">
           {flat.map((el_flat) => (
             <a href={`/home/flat/${el_flat.id}`}>
-
               <div className="card" style={{ width: '16rem' }} key={el_flat.id}>
                 <div className="card-body">
                   <figure className="figure">
