@@ -13,6 +13,7 @@ const morgan = require('morgan');
 const session = require("express-session");
 const FileStore = require("session-file-store")(session);
 
+const check = require("../db/connectCheck");
 
 const apartRoutes = require('./routers/apartRoutes');
 const flatRoutes = require('./routers/flatRoutes');
@@ -27,7 +28,7 @@ const apartRouter = require('./routers/apartRoutes')
 const flatFormRouter = require('./routers/flatFormRouter');
 const houseFormRouter = require('./routers/houseFormRouter');
 const apartFormRouter = require('./routers/apartmentFormRouter');
-
+const favoriteRouter = require('./routers/favoriteRouters');
 
 const app = express();
 
@@ -58,6 +59,8 @@ app.use(session(sessionConfig));
 
 
 app.use('/', flatRoutes);
+
+app.use('/', favoriteRouter);
 
 
 app.use('/login', loginRoutes);

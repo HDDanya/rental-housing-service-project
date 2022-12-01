@@ -14,6 +14,8 @@ const loginUser = async (req, res) => {
   try {
     const user = await User.findOne({ where: { email } });
     const passCheck = await bcrypt.compare(password, user.password);
+    console.log('🚀 ~ user', user)
+    
     if (passCheck) {
       req.session.newUser = user;
       req.session.save(() => {

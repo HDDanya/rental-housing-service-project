@@ -43,7 +43,7 @@ module.exports = function Layout({ children, user }) {
                       </li>
                       <img className="img-heart" src="/img/heart.png" alt="heart" />
                       <li className="nav-item">
-                        <a className="nav-link favourite" href="#">Избранное</a>
+                        <a className="nav-link favourite" href="/favorite">Избранное</a>
                       </li>
                       {user.email === 'admin@gmail.com' ? (
                         <>
@@ -96,7 +96,7 @@ module.exports = function Layout({ children, user }) {
                       </li>
                       <img className="img-heart" src="/img/heart.png" alt="heart" />
                       <li className="nav-item">
-                        <a className="nav-link favourite" href="#">Избранное</a>
+                        <a className="nav-link favourite" href="/favorite">Избранное</a>
                       </li>
                       <img className="img-login" src="/img/login.png" alt="login" />
                       <li className="nav-item">

@@ -9,7 +9,14 @@ module.exports = {
       password: '123',
       createdAt: new Date(),
       updatedAt: new Date(),
-    }
+    },
+    {
+      name: 'Sergey',
+      email: 'b@b.ru',
+      password: '11111',
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    },
     ], {});
   },
 

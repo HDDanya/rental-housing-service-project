@@ -5,6 +5,7 @@ const Layout = require('./Layout');
 module.exports = function House({house, user}) {
   return (
     <Layout user={user}>
+      <div className="container">
       <main className="main">
 
         <br />
@@ -41,6 +42,7 @@ module.exports = function House({house, user}) {
           ))}
         </div>
       </main>
+      </div>
     </Layout>
   );
 };
