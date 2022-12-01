@@ -3,6 +3,7 @@ const Fflat = require('../views/AddFlat');
 const { Flat } = require('../../db/models');
 
 const renderFlat = (req, res) => {
+    const user = req.session.newUser;
     try {
         const user = req.session.newUser;
         renderTemplate(Fflat, { user }, res);

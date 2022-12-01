@@ -22,7 +22,11 @@ const postApart = async (req, res) => {
         res.sendStatus(200);
     } catch (error) {
         console.log(error);
+
     }
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 module.exports = { renderApart, postApart };

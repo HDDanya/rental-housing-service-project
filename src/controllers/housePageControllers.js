@@ -1,6 +1,6 @@
-const renderTemplate = require("../lib/renderReactModel");
-const { House } = require("../../db/models");
-const HouseVieus = require("../views/House");
+const renderTemplate = require('../lib/renderReactModel');
+const { House } = require('../../db/models');
+const HouseVieus = require('../views/House');
 
 const renderHousePage = async (req, res) => {
   try {
