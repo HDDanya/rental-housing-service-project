@@ -3,26 +3,26 @@ const Apart = require('../views/AddApartment');
 const { Apartment } = require('../../db/models');
 
 const renderApart = (req, res) => {
-  const user = req.session.newUser;
-  try {
-    req.session.newUser?.email === 'admin@gmail.com' ? renderTemplate(Apart, { user }, res) : res.send('нету такой страницы');
-  } catch (error) {
-    console.log(error);
-  }
+    try {
+        const user = req.session.newUser;
+        renderTemplate(Apart, { user }, res);
+    } catch (error) {
+        console.log(error);
+    }
 };
 
 const postApart = async (req, res) => {
-  try {
-    if (req.session.newUser?.email) {
-      const {
-        adress, photo, price, size, floor, type,
-      } = req.body;
-      await Apartment.create({
-        user_id: req.session.newUser.id, adress, photo, price, size, floor, type,
-      });
-      res.sendStatus(200);
-    } else {
-      res.send('нету такой страницы');
+    try {
+        const {
+            adress, photo, price, size, floor, type,
+        } = req.body;
+        await Apartment.create({
+            user_id: req.session.newUser.id, adress, photo, price, size, floor, type,
+        });
+        res.sendStatus(200);
+    } catch (error) {
+        console.log(error);
+
     }
   } catch (error) {
     console.log(error);
