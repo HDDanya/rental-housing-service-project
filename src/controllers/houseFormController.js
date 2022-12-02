@@ -14,10 +14,10 @@ const renderHouse = (req, res) => {
 const postHouse = async (req, res) => {
     try {
         const {
-            adress, photo, price, size,
+            adress, photo, price, size, cord
         } = req.body;
         await House.create({
-            user_id: req.session.newUser.id, adress, photo, price, size,
+            user_id: req.session.newUser.id, adress, photo, price, size, cord
         });
         res.sendStatus(200);
     } catch (error) {

@@ -20,7 +20,8 @@ module.exports = (sequelize, DataTypes) => {
     adress: DataTypes.STRING,
     photo: DataTypes.STRING,
     size: DataTypes.INTEGER,
-    floor: DataTypes.INTEGER
+    floor: DataTypes.INTEGER,
+    cord: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Apartment',

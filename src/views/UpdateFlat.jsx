@@ -36,6 +36,13 @@ module.exports = function UpdateFlat({ user, task }) {
                 <input name="id" type="hidden" value={`${task.id}`} />
 
               </div>
+                            <div className="col-md-3">
+                                <label for="validationCustom03" className="form-label">Координаты</label>
+                                <input name='cord' type="number" className="form-control" id="validationCustom03" value={`${task.cord}`} required />
+                                <div className="invalid-feedback">
+                                    Please provide a valid number.
+                                </div>
+                            </div>
               <div className="col-12">
                 <button id="updFlat" className="btn btn-primary formEditBtn" type="submit">Редактировать</button>
               </div>

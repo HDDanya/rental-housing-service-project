@@ -31,6 +31,9 @@ module.exports = {
       floor: {
         type: Sequelize.INTEGER
       },
+      cord: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
