@@ -42,8 +42,9 @@ module.exports = function OneFlat({ oneFlatItem, user }) {
             </div>
 
           </div>
-
-          <div className="text-one-item">
+          <input id='oneFlatId' type="hidden" value={oneFlatItem.cord} />
+          <div id='map' className='map'></div>
+          {/* <div className="text-one-item">
             <p>
               Пентхаус, 2 -комн. Гагринская 10, для 8 гостей
 
@@ -67,7 +68,7 @@ module.exports = function OneFlat({ oneFlatItem, user }) {
 
               24 этаж. Спальные места: 2-спальная кровать 160*200; 3 2-спальных диван-кровати;
             </p>
-          </div>
+          </div> */}
 
         </div>
 

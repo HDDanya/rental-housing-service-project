@@ -37,11 +37,11 @@ const renderUpdateFlat = async (req, res) => {
 const patchUpdateApart = async (req, res) => {
     try {
         const {
-            taskId, adress, photo, price, size, floor, type,
+            taskId, adress, photo, price, size, floor, type, cord
         } = req.body;
 
         await Apartment.update({
-             adress, photo, price, size, floor, type,
+            adress, photo, price, size, floor, type, cord
         }, {
             where: {
                 id: taskId
@@ -56,11 +56,11 @@ const patchUpdateApart = async (req, res) => {
 const patchUpdateHouse = async (req, res) => {
     try {
         const {
-            taskId, adress, photo, price, size
+            taskId, adress, photo, price, size, cord
         } = req.body;
 
         await House.update({
-            adress, photo, price, size
+            adress, photo, price, size, cord
         }, {
             where: {
                 id: taskId
@@ -75,11 +75,11 @@ const patchUpdateHouse = async (req, res) => {
 const patchUpdateFlat = async (req, res) => {
     try {
         const {
-            taskId, adress, photo, price, size, floor
+            taskId, adress, photo, price, size, floor, cord
         } = req.body;
 
         await Flat.update({
-            adress, photo, price, size, floor
+            adress, photo, price, size, floor, cord
         }, {
             where: {
                 id: taskId
