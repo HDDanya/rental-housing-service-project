@@ -22,9 +22,9 @@ const regRoutes = require('./routers/regRoutes');
 
 const mainRouter = require('./routers/mainRouter');
 
-const houseRouter = require("./routers/houseRoutes");
+const houseRouter = require('./routers/houseRoutes');
 const flatRoutes = require('./routers/flatRoutes');
-const apartRouter = require('./routers/apartRoutes')
+const apartRouter = require('./routers/apartRoutes');
 
 const flatFormRouter = require('./routers/flatFormRouter');
 const houseFormRouter = require('./routers/houseFormRouter');
@@ -33,6 +33,8 @@ const apartFormRouter = require('./routers/apartmentFormRouter');
 const taskUpdateApartRouter = require('./routers/taskUpdateApartRouter');
 const taskUpdateFlatRouter = require('./routers/taskUpdateFlatRouter');
 const taskUpdateHouseRouter = require('./routers/taskUpdateHouseRouter');
+
+const deleteCard = require('./routers/deleteCardRoutes');
 
 const oneItemRouter = require('./routers/moreRouters');
 
@@ -67,9 +69,9 @@ app.use('/login', loginRoutes);
 app.use('/register', regRoutes);
 app.use('/', mainRouter);
 
-app.use('/apart', apartRouter)
+app.use('/apart', apartRouter);
 app.use('/flat', flatRoutes);
-app.use('/house', houseRouter)
+app.use('/house', houseRouter);
 
 app.use('/form/flat', flatFormRouter);
 app.use('/form/house', houseFormRouter);
@@ -78,6 +80,8 @@ app.use('/form/apartment', apartFormRouter);
 app.use('/apart/update', taskUpdateApartRouter);
 app.use('/flat/update', taskUpdateFlatRouter);
 app.use('/house/update', taskUpdateHouseRouter);
+
+app.use('/', deleteCard);
 
 app.use('/home', oneItemRouter);
 

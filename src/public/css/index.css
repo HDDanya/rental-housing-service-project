@@ -150,25 +150,22 @@ html {
 }
 
 .show-btn {
-  width: 130px;
-  height: 38px;
-  border: 1px solid #0D6EFD;
-  border-radius: 6px;
-  background-color: #0D6EFD;
-  color: #FFFFFF;
-  transition: box-shadow 0.2s, ease-in-out, transform 0.2s ease-in-out;
-  z-index: 999;
+  text-decoration: none;
+  color: #5A5A5A;
+  font-weight: 500;
+  font-size: 18px;
+  margin-left: 20px;
 }
+
 
 .show-btn:hover {
-  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
-  /* box-shadow: 0px 8px 15px #0d6dfd3b; */
-  background-color: #297bf7;
-
-  /* transform: translateY(-1px); */
-  border: none;
+  color: #297bf7;
+  font-weight: 600;
+  cursor: pointer;
+  /* transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+  text-shadow: 0px 20px 10px #0d6dfd3b; */
+  transform: translateX(3px);
 }
-
 
 
 .container {
@@ -182,7 +179,7 @@ html {
 
 .cards {
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 10px;
@@ -195,7 +192,7 @@ html {
 .cards-flat,
 .cards-house {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 10px;
@@ -206,6 +203,7 @@ html {
 
 
 .card {
+  position: relative;
   border-radius: 20px;
   border: 1px solid #b9b9b9;
   max-height: 380px;
@@ -450,4 +448,44 @@ h2 {
 .one-item-container {
   margin-top: 200px;
   margin-bottom: 350px;
+}
+
+.me-auto {
+  margin-right: 0 !important;
+}
+
+.editBtn:hover {
+  color: #297bf7;
+  font-weight: 600;
+}
+
+.delBtn:hover {
+  color: #fc4343;
+  font-weight: 600;
+}
+
+.btn {
+  font-weight: 500;
+}
+
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+}
+
+
+.formEditBtn {
+  width: 150px;
+}
+
+
+.favourite-cart {
+  position: absolute;
+  ;
+  top: 30px;
+  right: 30px;
+  z-index: 999;
 }
