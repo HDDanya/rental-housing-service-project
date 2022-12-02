@@ -2,7 +2,7 @@ const React = require('react');
 
 const Layout = require('./Layout');
 
-module.exports = function House({ house, user }) {
+function House({ house, user }) {
   return (
     <Layout user={user}>
       <div className="container">
@@ -11,21 +11,21 @@ module.exports = function House({ house, user }) {
 
           <br />
           <div data-cards="123" className="cards">
-            {house?.map((entry) => (
-              <div className="card" style={{ width: '16rem' }} key={entry.id}>
+            {house?.map((el) => (
+              <div className="card" style={{ width: '16rem' }} key={el.id}>
                 <div className="card-body">
                   <figure className="figure">
-                    <img src={entry.photo} className="card-img-top figure-img img-fluid rounded" alt="" />
+                    <img src={el.photo} className="card-img-top figure-img img-fluid rounded" alt="" />
                   </figure>
                   <p className="card-text">
                     Дом
                     {' '}
-                    {entry.size}
+                    {el.size}
                     {' '}
                     м²
                   </p>
                   <p className="card-text">
-                    {entry.price}
+                    {el.price}
                     {' '}
                     ₽ в месяц
                   </p>
@@ -33,11 +33,12 @@ module.exports = function House({ house, user }) {
                   <p className="card-text">
                     Москва
                     {' '}
-                    {entry.adress}
+                    {el.adress}
                     {' '}
                   </p>
-                  <a href={`/tasks/${entry.id}`} className="btn btn-primary">Детали</a>
-                  {/* <a href="#" data-delBtn={entry.id} className="m-2 btn btn-danger">DELETE</a> */}
+                  <a href={`${el.id}`} className="btn btn-primary">Подробнее</a>
+                  {user?.email === 'admin@gmail.com'
+                  ? <button className="delBtn" data-id={el.id} data-type='house' >deleteCard</button> : null}
                 </div>
               </div>
             ))}
@@ -48,3 +49,6 @@ module.exports = function House({ house, user }) {
     </Layout>
   );
 };
+
+
+module.exports = House;

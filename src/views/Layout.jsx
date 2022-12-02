@@ -16,6 +16,7 @@ module.exports = function Layout({ children, user }) {
         />
         <link rel="stylesheet" href="/css/index.css" />
         <link rel="stylesheet" href="/styles/main.css" />
+        <script defer src="/js/client.js"></script>
         <title>ADBoard</title>
       </head>
 

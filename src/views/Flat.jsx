@@ -35,7 +35,9 @@ function Flat({ flat, user }) {
                   {el.floor}
                   -й этаж
                 </p>
-                <a href={`/tasks/${el.id}`} className="btn btn-primary">Подробнее</a>
+                <a href={`${el.id}`} className="btn btn-primary">Подробнее</a>
+                {user?.email === 'admin@gmail.com'
+                  ? <button className="delBtn" data-id={el.id} data-type='flat' >deleteCard</button> : null}
               </div>
             </div>
           ))}

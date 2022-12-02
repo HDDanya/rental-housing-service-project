@@ -5,7 +5,7 @@ const Layout = require('./Layout');
 function Apart({ apart, user }) {
   return (
     <Layout user={user}>
-      <div className="container">
+      <div className="container"> 
         {/* <a href="/" className="back">&laquo; На Главную</a> */}
         <div className="cards">
           {apart?.map((el) => (
@@ -35,7 +35,9 @@ function Apart({ apart, user }) {
                   {el.floor}
                   -й этаж
                 </p>
-                <a href={`/tasks/${el.id}`} className="btn btn-primary">Подробнее</a>
+                <a href={`${el.id}`} className="btn btn-primary">Подробнее</a>
+                {user?.email === 'admin@gmail.com'
+                  ? <button className="delBtn" data-id={el.id} data-type='apart' >deleteCard</button> : null}
               </div>
             </div>
           ))}

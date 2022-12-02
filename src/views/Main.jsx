@@ -9,57 +9,58 @@ function Main({
     <Layout user={user}>
 
       <div className="container">
-        {/* <a href="/" className="back">Главная</a> */}
+        <a href="/" className="back">Главная</a>
         {/* <main className="main"> */}
         <div data-cards="123" className="cards">
-          {flat.map((entry) => (
-            <div className="card" style={{ width: '16rem' }} key={entry.id}>
+          {flat?.map((el) => (
+            <div className="card" style={{ width: '16rem' }} key={el.id}>
               <div className="card-body">
                 <figure className="figure">
-                  <img src={entry.photo} className="card-img-top figure-img img-fluid rounded" alt="" />
+                  <img src={el.photo} className="card-img-top figure-img img-fluid rounded" alt="" />
                 </figure>
                 <p className="card-text">
                   Комната
                   {' '}
-                  {entry.size}
+                  {el.size}
                   {' '}
                   м²
                 </p>
                 <p className="card-text">
-                  {entry.price}
+                  {el.price}
                   {' '}
                   ₽ в месяц
                 </p>
                 <p className="card-text">
                   Москва
                   {' '}
-                  {entry.adress}
+                  {el.adress}
                   ,
                   {' '}
-                  {entry.floor}
+                  {el.floor}
                   -й этаж
                 </p>
-                <a href={`/tasks/${entry.id}`} className="btn btn-primary more">Подробнее</a>
-                {/* <a href="#" data-delBtn={entry.id} className="m-2 btn btn-danger">DELETE</a> */}
+                <a href={`${el.id}`} className="btn btn-primary">Подробнее</a>
+                {user?.email === 'admin@gmail.com'
+                  ? <button className="delBtn" data-id={el.id} data-type='flat' >deleteCard</button> : null}
+                {/* <a href="#" data-delBtn={el.id} className="m-2 btn btn-danger">DELETE</a> */}
               </div>
             </div>
           ))}
-
-          {house.map((entry) => (
-            <div className="card" style={{ width: '16rem' }} key={entry.id}>
+          {house?.map((el) => (
+            <div className="card" style={{ width: '16rem' }} key={el.id}>
               <div className="card-body">
                 <figure className="figure">
-                  <img src={entry.photo} className="card-img-top figure-img img-fluid rounded" alt="" />
+                  <img src={el.photo} className="card-img-top figure-img img-fluid rounded" alt="" />
                 </figure>
                 <p className="card-text">
                   Дом
                   {' '}
-                  {entry.size}
+                  {el.size}
                   {' '}
                   м²
                 </p>
                 <p className="card-text">
-                  {entry.price}
+                  {el.price}
                   {' '}
                   ₽ в месяц
                 </p>
@@ -67,34 +68,36 @@ function Main({
                 <p className="card-text">
                   Москва
                   {' '}
-                  {entry.adress}
+                  {el.adress}
 
                   {' '}
 
                 </p>
-                <a href={`/tasks/${entry.id}`} className="btn btn-primary">Детали</a>
-                {/* <a href="#" data-delBtn={entry.id} className="m-2 btn btn-danger">DELETE</a> */}
+                <a href={`${el.id}`} className="btn btn-primary">Подробнее</a>
+                {user?.email === 'admin@gmail.com'
+                  ? <button className="delBtn" data-id={el.id} data-type='house' >deleteCard</button> : null}
+                {/* <a href="#" data-delBtn={el.id} className="m-2 btn btn-danger">DELETE</a> */}
               </div>
             </div>
           ))}
 
-          {apartment.map((entry) => (
+          {apartment?.map((el) => (
 
-            <div className="card" style={{ width: '16rem' }} key={entry.id}>
+            <div className="card" style={{ width: '16rem' }} key={el.id}>
               <div className="card-body">
                 <figure className="figure">
-                  <img src={entry.photo} className="card-img-top figure-img img-fluid rounded" alt="" />
+                  <img src={el.photo} className="card-img-top figure-img img-fluid rounded" alt="" />
                 </figure>
                 <p className="card-text">
 
                   Квартира
                   {' '}
-                  {entry.size}
+                  {el.size}
                   {' '}
                   м²
                 </p>
                 <p className="card-text">
-                  {entry.price}
+                  {el.price}
                   {' '}
                   ₽ в месяц
                 </p>
@@ -102,17 +105,19 @@ function Main({
                 <p className="card-text">
                   Москва
                   {' '}
-                  {entry.adress}
+                  {el.adress}
 
                   ,
                   {' '}
-                  {entry.floor}
+                  {el.floor}
                   -й этаж
 
                   {' '}
                 </p>
-                <a href={`/tasks/${entry.id}`} className="btn btn-primary">Детали</a>
-                {/* <a href="#" data-delBtn={entry.id} className="m-2 btn btn-danger">DELETE</a> */}
+                <a href={`${el.id}`} className="btn btn-primary">Подробнее</a>
+                {user?.email === 'admin@gmail.com'
+                  ? <button className="delBtn" data-id={el.id} data-type='apart' >deleteCard</button> : null}
+                {/* <a href="#" data-delBtn={el.id} className="m-2 btn btn-danger">DELETE</a> */}
               </div>
             </div>
           ))}
