@@ -14,8 +14,8 @@ const renderFlat = (req, res) => {
 
 const postFlat = async (req, res) => {
     try {
-        const { adress, photo, price, size, floor } = req.body;
-        await Flat.create({ user_id: req.session.newUser.id, adress, photo, price, size, floor });
+        const { adress, photo, price, size, floor, cord } = req.body;
+        await Flat.create({ user_id: req.session.newUser.id, adress, photo, price, size, floor, cord });
         res.sendStatus(200);
     } catch (error) {
         console.log(error);

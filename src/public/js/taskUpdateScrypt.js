@@ -16,12 +16,13 @@ subBtn?.addEventListener('click', async (event) => {
     const size = updBtn.size.value;
     const floor = updBtn.floor.value;
     const type = updBtn.type.value;
+    const cord = updBtn.cord.value;
     const response = await fetch('/apart/update/:id', {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ taskId, adress, photo, price, size, floor, type })
+        body: JSON.stringify({ taskId, adress, photo, price, size, floor, type, cord })
     });
 });
 
@@ -32,12 +33,13 @@ houseBtn?.addEventListener('click', async (event) => {
     const photo = updHouse.photo.value;
     const price = updHouse.price.value;
     const size = updHouse.size.value;
+    const cord = updHouse.cord.value;
     const response = await fetch('/house/update/:id', {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ taskId, adress, photo, price, size })
+        body: JSON.stringify({ taskId, adress, photo, price, size, cord })
     });
 });
 
@@ -49,11 +51,12 @@ flatBtn?.addEventListener('click', async (event) => {
     const price = updFlat.price.value;
     const size = updFlat.size.value;
     const floor = updFlat.floor.value;
+    const cord = updFlat.cord.value;
     const response = await fetch('/flat/update/:id', {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ taskId, adress, photo, price, size, floor })
+        body: JSON.stringify({ taskId, adress, photo, price, size, floor, cord })
     });
 });
