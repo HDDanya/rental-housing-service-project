@@ -14,15 +14,14 @@ const renderApart = (req, res) => {
 const postApart = async (req, res) => {
     try {
         const {
-            adress, photo, price, size, floor, type, cord
+            adress, photo, price, size, floor, type, cord,
         } = req.body;
         await Apartment.create({
-            user_id: req.session.newUser.id, adress, photo, price, size, floor, type, cord
+            user_id: req.session.newUser.id, adress, photo, price, size, floor, type, cord,
         });
         res.sendStatus(200);
     } catch (error) {
         console.log(error);
-
     }
 };
 

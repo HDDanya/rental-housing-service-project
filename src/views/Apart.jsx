@@ -92,4 +92,4 @@ function Apart({ apart, user }) {
   );
 }
 
-module.exports = Apart;
+module.exports = { Apart };
