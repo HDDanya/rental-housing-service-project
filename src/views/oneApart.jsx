@@ -42,9 +42,9 @@ module.exports = function OneApart({ oneApartItem, user }) {
             </div>
 
           </div>
-          <input id= 'oneApartId' type="hidden" value={oneApartItem.cord}/>
-          <div id='map' className='map'></div>
-          {/* <div className="text-one-item">
+          {/* <input id= 'oneApartId' type="hidden" value={oneApartItem.cord}/>
+          <div id='map' className='map'></div> */}
+          <div className="text-one-item">
             <p>
               Предлагается трех уровневый пентхаус с новым дизайнерским ремонтом общей площадью 650 кв., м. 
               Функциональная планировка включает: 1-й уровень: кабинет-гостиная с дровяным камином, большая мастер 
@@ -57,7 +57,7 @@ module.exports = function OneApart({ oneApartItem, user }) {
               В отделке использовались дорогостоящие материалы: итальянский мрамор, полудрагоценные камни, натуральная кожа. 
               На первых двух уровнях действует система "умный дом". Высокие потолки 3,8 м.
             </p>
-          </div> */}
+          </div>
 
         </div>
 

@@ -42,9 +42,9 @@ module.exports = function OneHouse({ oneHouseItem, user }) {
             </div>
 
           </div>
-          <input id='oneHouseId' type="hidden" value={oneHouseItem.cord} />
-          <div id='map' className='map'></div>
-          {/* <div className="text-one-item">
+          {/* <input id='oneHouseId' type="hidden" value={oneHouseItem.cord} />
+          <div id='map' className='map'></div> */}
+          <div className="text-one-item">
             <p>
               Предлагается в аренду дом 2 000 м2 на участке площадью 64,27 соток,
               с выполненным ландшафтным дизайном. В центре поселка располагается живописное большое озеро
@@ -59,7 +59,7 @@ module.exports = function OneHouse({ oneHouseItem, user }) {
               по периметру установлена система видеонаблюдения. В темное время суток сотрудники охранной службы
               осуществляют патрулирование территории.
             </p>
-          </div> */}
+          </div>
 
         </div>
 

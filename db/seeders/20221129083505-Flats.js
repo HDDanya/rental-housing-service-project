@@ -8,6 +8,7 @@ module.exports = {
       photo: '/img/flat/2.jpg',
       size: 24,
       floor: 3,
+      cord: '55.642335082943674,37.94256333309938',
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
@@ -17,6 +18,7 @@ module.exports = {
       photo: '/img/flat/1.jpg',
       size: 19,
       floor: 15,
+      cord: '55.647457232052695,37.938483919578594',
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
@@ -26,6 +28,7 @@ module.exports = {
       photo: '/img/flat/3.jpg',
       size: 27,
       floor: 2,
+      cord: '55.649103044628454,37.93898850189476',
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
@@ -35,6 +38,7 @@ module.exports = {
       photo: '/img/flat/4.jpg',
       size: 18,
       floor: 5,
+      cord: '55.649103044628454,37.93898850189476',
       createdAt: new Date(),
       updatedAt: new Date(),
     },
@@ -45,6 +49,7 @@ module.exports = {
       photo: '/img/flat/2.jpg',
       size: 24,
       floor: 3,
+      cord: '55.649103044628454,37.93898850189476',
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
@@ -54,6 +59,7 @@ module.exports = {
       photo: '/img/flat/1.jpg',
       size: 19,
       floor: 15,
+      cord: '55.649103044628454,37.93898850189476',
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
@@ -63,6 +69,7 @@ module.exports = {
       photo: '/img/flat/3.jpg',
       size: 27,
       floor: 2,
+      cord: '55.649103044628454,37.93898850189476',
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
@@ -72,6 +79,7 @@ module.exports = {
       photo: '/img/flat/1.jpg',
       size: 18,
       floor: 5,
+      cord: '55.649103044628454,37.93898850189476',
       createdAt: new Date(),
       updatedAt: new Date(),
     },
