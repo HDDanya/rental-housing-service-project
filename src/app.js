@@ -10,7 +10,7 @@ const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
 
-const check = require('../db/connectCheck');
+// const check = require('../db/connectCheck');
 
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
@@ -42,7 +42,7 @@ const app = express();
 
 const { PORT, SESSION_SECRET } = process.env;
 
-check();
+// check();
 
 app.use(morgan('dev'));
 
